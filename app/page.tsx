@@ -279,7 +279,67 @@ export default function Portfolio() {
             <motion.h2 variants={fadeInUp} className="text-sm font-mono text-primary mb-12 uppercase tracking-wider">Featured Projects</motion.h2>
             
             <div className="space-y-8">
-              {/* Project 1 */}
+              {/* Project 1 - Credit Scoring System */}
+              <motion.div 
+                variants={fadeInUp}
+                className="border border-border rounded-lg p-6 hover:border-primary/50 transition-colors bg-card relative overflow-hidden"
+              >
+                {/* Static credit/financial icon */}
+                <div className="absolute top-4 right-4 opacity-10">
+                  <svg width="100" height="100" viewBox="0 0 100 100" className="text-primary">
+                    <rect x="20" y="35" width="60" height="35" rx="4" stroke="currentColor" strokeWidth="2.5" fill="none" />
+                    <line x1="20" y1="45" x2="80" y2="45" stroke="currentColor" strokeWidth="2.5" />
+                    <circle cx="35" cy="57" r="3" fill="currentColor" />
+                    <circle cx="45" cy="57" r="3" fill="currentColor" />
+                    <circle cx="55" cy="57" r="3" fill="currentColor" />
+                    <circle cx="65" cy="57" r="3" fill="currentColor" />
+                    <path d="M 25 28 L 30 20 L 35 28" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 65 28 L 70 20 L 75 28" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                  <h3 className="text-xl font-semibold text-foreground">Credit Scoring System with Explainability</h3>
+                  <a 
+                    href="https://github.com/AbhishekParita/Credit-Scoring-System-with-Explainability"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm text-primary hover:bg-primary/5 border border-border hover:border-primary rounded-lg font-mono transition-all cursor-pointer select-none whitespace-nowrap"
+                  >
+                    <Github className="w-4 h-4 pointer-events-none" />
+                    <span className="pointer-events-none">View Code</span>
+                    <ExternalLink className="w-3 h-3 pointer-events-none" />
+                  </a>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Production-style ML system for predicting credit default risk with full pipeline from data processing to API deployment, featuring explainability, fairness analysis, and business profit simulation.
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-2 mb-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Trained <span className="text-primary font-semibold">XGBoost model</span> with calibrated probabilities and custom <span className="text-primary font-semibold">24 engineered financial features</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Implemented explainability using SHAP for per-user and global model interpretation
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Performed fairness & bias analysis with threshold optimization and cost-sensitive business profit simulation
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Deployed prediction and explainability endpoints with drift detection monitoring
+                  </li>
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-xs font-mono bg-primary/10 text-primary rounded-full">XGBoost</span>
+                  <span className="px-3 py-1 text-xs font-mono bg-primary/10 text-primary rounded-full">SHAP</span>
+                  <span className="px-3 py-1 text-xs font-mono bg-primary/10 text-primary rounded-full">FastAPI</span>
+                  <span className="px-3 py-1 text-xs font-mono bg-primary/10 text-primary rounded-full">Scikit-learn</span>
+                </div>
+              </motion.div>
+
+              {/* Project 2 - Model Drift Detection */}
               <motion.div 
                 variants={fadeInUp}
                 className="border border-border rounded-lg p-6 hover:border-primary/50 transition-colors bg-card relative overflow-hidden"
@@ -306,11 +366,11 @@ export default function Portfolio() {
                     href="https://github.com/AbhishekParita/ML-Model-Drift-Failure-Detection-System"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-mono whitespace-nowrap"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm text-primary hover:bg-primary/5 border border-border hover:border-primary rounded-lg font-mono transition-all cursor-pointer select-none whitespace-nowrap"
                   >
-                    <Github className="w-4 h-4" />
-                    View Code
-                    <ExternalLink className="w-3 h-3" />
+                    <Github className="w-4 h-4 pointer-events-none" />
+                    <span className="pointer-events-none">View Code</span>
+                    <ExternalLink className="w-3 h-3 pointer-events-none" />
                   </a>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -337,7 +397,7 @@ export default function Portfolio() {
                 </div>
               </motion.div>
 
-              {/* Project 2 - BGP Anomaly Detection */}
+              {/* Project 3 - BGP Anomaly Detection */}
               <motion.div 
                 variants={fadeInUp}
                 className="border border-border rounded-lg p-6 hover:border-primary/50 transition-colors bg-card relative overflow-hidden"
@@ -369,11 +429,11 @@ export default function Portfolio() {
                     href="https://github.com/AbhishekParita/BGP-anomaly-detection"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-mono whitespace-nowrap"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm text-primary hover:bg-primary/5 border border-border hover:border-primary rounded-lg font-mono transition-all cursor-pointer select-none whitespace-nowrap"
                   >
-                    <Github className="w-4 h-4" />
-                    View Code
-                    <ExternalLink className="w-3 h-3" />
+                    <Github className="w-4 h-4 pointer-events-none" />
+                    <span className="pointer-events-none">View Code</span>
+                    <ExternalLink className="w-3 h-3 pointer-events-none" />
                   </a>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -432,11 +492,11 @@ export default function Portfolio() {
                     href="https://github.com/AbhishekParita/Fraud_Detection-using-XGboost"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-mono"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm text-primary hover:bg-primary/5 border border-border hover:border-primary rounded-lg font-mono transition-all cursor-pointer select-none whitespace-nowrap"
                   >
-                    <Github className="w-4 h-4" />
-                    View Code
-                    <ExternalLink className="w-3 h-3" />
+                    <Github className="w-4 h-4 pointer-events-none" />
+                    <span className="pointer-events-none">View Code</span>
+                    <ExternalLink className="w-3 h-3 pointer-events-none" />
                   </a>
                 </div>
                 <p className="text-muted-foreground mb-4">
