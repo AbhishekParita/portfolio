@@ -25,3 +25,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local python environments
+.venv/
+venv/
+__pycache__/
+
+# temporary/untracked files
+Untitled.make
+*.log
+*.zip
